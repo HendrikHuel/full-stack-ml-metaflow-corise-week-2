@@ -54,6 +54,8 @@ class TFlow5(FlowSpec):
         """
         from sklearn import tree
 
+        print(f"Depth: {self.input}")
+
         # Instantiate model and fit to data
         self.clf = tree.DecisionTreeClassifier(max_depth=self.input)
         self.clf.fit(self.X_train, self.y_train)

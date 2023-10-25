@@ -16,7 +16,7 @@ class TFlow4(FlowSpec):
         self.df = pd.read_csv('./data/titanic.csv')
         self.next(self.model1, self.model2, self.data_prep)
 
-
+    @card
     @step
     def model1(self):
         """
@@ -30,7 +30,7 @@ class TFlow4(FlowSpec):
 
         self.next(self.choose_model)
         
-        
+    @card     
     @step
     def model2(self):
         """
@@ -44,6 +44,7 @@ class TFlow4(FlowSpec):
         
         self.next(self.choose_model)
 
+    @card
     @step
     def data_prep(self):
         """
@@ -75,7 +76,7 @@ class TFlow4(FlowSpec):
 
         self.next(self.model3)
 
-
+    @card
     @step
     def model3(self):
         """
@@ -90,6 +91,7 @@ class TFlow4(FlowSpec):
 
         self.next(self.choose_model)
         
+    @card
     @step
     def choose_model(self, inputs):
         """
@@ -107,7 +109,7 @@ class TFlow4(FlowSpec):
         
         self.next(self.end)
 
-
+    @card
     @step
     def end(self):
         """

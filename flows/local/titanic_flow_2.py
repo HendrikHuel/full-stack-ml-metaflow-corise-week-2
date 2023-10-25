@@ -24,7 +24,6 @@ class TFlow2(FlowSpec):
         self.df['model_2'] = self.df.Sex == 'female'
         self.score2 = accuracy_score(self.df['Survived'], self.df['model_2'])
 
-
         self.next(self.end)
         
         

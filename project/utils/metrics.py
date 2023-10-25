@@ -2,6 +2,7 @@
 
 from typing import Tuple
 from sklearn.metrics import accuracy_score, roc_auc_score
+import pandas as pd
 
 def calc_scores(valdf: pd.DataFrame, model_col: str = "dummy_model") -> Tuple[float, float]:
     """Calculate and display ACC and ROC."""
